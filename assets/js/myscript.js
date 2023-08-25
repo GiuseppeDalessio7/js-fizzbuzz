@@ -19,26 +19,28 @@ const listEl = document.getElementById('list');
 for (let i = 1; i <= 100; i++){
     // console.log(i);
     const listItem = document.createElement("li");
-    listItem.append(i);
-    listEl.append(listItem);
-
-    if(i % 3 == 0){
-        // console.log('Fizz');
-        listEl.append('Fizz')
-    }
-    if (i % 5 == 0){
-        // console.log('Buzz');
-        listEl.append('Buzz')   
-    }
     if ((i % 3) === 0 && (i % 5) === 0){
-        // console.log('FizzBuzz');
-        listEl.append('FizzBuzz')
+        console.log('FizzBuzz');
+        listItem.innerText = 'FizzBuzz';
     }
-    else(i == 0);{ 
+    // è divisibile per 3
+    else if (i % 3 == 0) {
+        console.log('Fizz');
+        listItem.innerText = 'Fizz'; // 3ciclo
+    }
+    // divisibile per 5
+    else if (i % 5 == 0){
+        console.log('Buzz');
+        listItem.innerText = 'Buzz';
+    }
+    // divisibile per 3 e per 5
+     else {
+        // non è divisibile ne per 3 ne per 5 
         console.log(i);
-        listEl.append(i)
-}
+        listItem.innerText = i; // 1ciclo, 2ciclo, 3ciclo
+    }
     
-    
+    // 
+    listEl.append(listItem);
 }
 
