@@ -23,16 +23,22 @@ for (let i = 1; i <= 100; i++){
     listEl.append(listItem);
 
     if(i % 3 == 0){
-        console.log('Fizz');
+        // console.log('Fizz');
+        listEl.append('Fizz')
     }
     if (i % 5 == 0){
-        console.log('Buzz');   
+        // console.log('Buzz');
+        listEl.append('Buzz')   
     }
-    if (i % 3 == i % 5 == 0){
-        console.log('FizzBuzz');
+    if ((i % 3) === 0 && (i % 5) === 0){
+        // console.log('FizzBuzz');
+        listEl.append('FizzBuzz')
     }
-    else(i == 0);{
-    console.log(i);}
+    else(i == 0);{ 
+        console.log(i);
+        listEl.append(i)
+}
+    
     
 }
 
