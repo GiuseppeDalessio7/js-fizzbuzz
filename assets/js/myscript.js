@@ -22,22 +22,24 @@ for (let i = 1; i <= 100; i++){
     if ((i % 3) === 0 && (i % 5) === 0){
         console.log('FizzBuzz');
         listItem.innerText = 'FizzBuzz';
+        listEl.classList.add('bg-success')
     }
     // è divisibile per 3
     else if (i % 3 == 0) {
         console.log('Fizz');
-        listItem.innerText = 'Fizz'; // 3ciclo
+        listItem.innerText = 'Fizz';
+        listEl.classList.add('bg-info')
     }
     // divisibile per 5
     else if (i % 5 == 0){
         console.log('Buzz');
         listItem.innerText = 'Buzz';
+        listEl.classList.add('bg-warning');
     }
-    // divisibile per 3 e per 5
-     else {
-        // non è divisibile ne per 3 ne per 5 
+     else {    
         console.log(i);
-        listItem.innerText = i; // 1ciclo, 2ciclo, 3ciclo
+        listItem.innerText = i;
+        listEl.classList.add('bg-primary')
     }
     
     // 
