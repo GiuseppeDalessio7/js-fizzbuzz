@@ -22,19 +22,19 @@ for (let i = 1; i <= 100; i++){
     if ((i % 3) === 0 && (i % 5) === 0){
         console.log('FizzBuzz');
         listItem.innerText = 'FizzBuzz';
-        listEl.classList.add('bg-success')
+        listItem.classList.add('bg-danger')
     }
     // è divisibile per 3
     else if (i % 3 == 0) {
         console.log('Fizz');
         listItem.innerText = 'Fizz';
-        listEl.classList.add('bg-info')
+        listItem.classList.add('bg-success')
     }
     // divisibile per 5
     else if (i % 5 == 0){
         console.log('Buzz');
         listItem.innerText = 'Buzz';
-        listEl.classList.add('bg-warning');
+        listItem.classList.add('bg-warning');
     }
      else {    
         console.log(i);
